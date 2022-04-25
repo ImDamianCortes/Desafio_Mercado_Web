@@ -1,0 +1,19 @@
+{{#each productos}}
+
+<!-- contenedor -->
+<div class="col-6 col-sm-4 p-3">
+    <div class="card text-center">
+        <button class="product" id="{{this}}">
+            <!-- header -->
+            <div class="card-header">
+                <h3>{{this}}</h3>
+            </div>
+            <!-- body -->
+            <div class="card-body">
+                <img src="/assets/img/{{this}}.png" class="w-75">
+            </div>
+        </button>
+    </div>
+</div>
+
+{{/each}}

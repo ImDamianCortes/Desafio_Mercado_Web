@@ -1,0 +1,36 @@
+<h1 class="text-center bg-dark text-white p-3">Mercado Web</h1>
+
+<div class="row">
+
+    <!-- Contenedor - Descripcion del desafio -->
+    <div class="col-12 col-lg-6 p-4">
+        <h3 class="text-center bg-dark text-white p-3">Descripcion del desafio</h3>
+        <embed src="/docs/Desafio_Mercado_Web.pdf" type="application/pdf" class="contain w-100">
+    </div>
+
+    <!-- Contenedor - Desafio -->
+    <div class="col-12 col-lg-6 p-4">
+        <h3 class="text-center bg-dark text-white p-3">Implementacion</h3>
+        <div>
+            {{> Menu}}
+
+            {{#if productos}}
+            <div class="row">
+                {{> Producto}}
+            </div>
+            {{/if}}
+
+            {{#unless productos}}
+                {{> Not_stock}}
+            {{/unless}}
+
+        </div>
+
+        <div class="modal fade" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            {{> Cesta}}
+        </div>
+
+
+    </div>
+
+</div>
